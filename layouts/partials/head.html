@@ -45,4 +45,16 @@
     {{ range .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ "css/" | absURL }}{{ . }}" />
     {{ end }}
+
+    {{- /* seo，百度和 Google */ -}}
+    {{- /* https://ziyuan.baidu.com/site/siteverify?id=1378159853#/ */ -}}
+    <meta name="baidu-site-verification" content="codeva-8R2pKP1np7" />
+    {{- /* https://search.google.com/search-console/welcome?hl=zh-CN */ -}}
+    <meta name="google-site-verification" content="ygQ8KQgcIWSof2ZwcTWHsY7J0FEV5LF6uxVybFBHEBc" />
+
+    <!-- busuanzi -->
+    {{- if .Site.Params.busuanzi.enable -}}
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    {{- end -}}
 </head>

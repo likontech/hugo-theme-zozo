@@ -3,7 +3,8 @@
         <div class="site_title">
             <h1>
                 <a href="{{ .Site.BaseURL }}">
-                    <span>{{ .Site.Title }}</span>
+                    <!-- <span>{{ .Site.Title }}</span> -->
+                    <img class="likon" style="margin-top: -20px; margin-left: -10px;" src="{{ "images/icon_likon.png" | absURL }}" width="150px">
                 </a>
             </h1>
         </div>
@@ -12,6 +13,7 @@
             <div class="my_socials">
                 {{ range $key, $val := .Site.Social }}
                 {{ if ne $val "" }}
+                <!-- https://remixicon.com/ -->
                 <a href="{{ $val }}" title="{{ $key }}" target="_blank"><i class="ri-{{ $key }}-fill"></i></a>
                 {{ end }}
                 {{ end }}

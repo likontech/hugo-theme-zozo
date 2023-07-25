@@ -1,19 +1,42 @@
-<!-- valine -->
-<div class="doc_comments">
-    <div class="comments_block_title">发表评论</div>
-    <div id="vcomments"></div>
-</div>
 
-<link rel="stylesheet" href="{{ "/css/comments.css" | absURL }}" />
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+{{ if .Site.Params.utterances.enable }}
+    <script src="https://utteranc.es/client.js"
+        repo="likontech/likontech.github.io"
+        issue-term="title"
+        label="碎碎念"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+    </script>    
+{{ else if .Site.Params.valine.enable }}
+    <!-- # Valine.
+        # You can get your appid and appkey from https://leancloud.cn
+        # more info please open https://valine.js.org
+        [params.valine]
+            enable = false
+            appId = ""
+            appKey = ""
+            placeholder = " "
+            visitor = true -->
+    <!-- valine -->
+    <div class="doc_comments">
+        <div class="comments_block_title">发表评论</div>
+        <div id="vcomments"></div>
+    </div>
 
-<script type="text/javascript">
-    new Valine({
-        el: '#vcomments',
-        appId: '{{ .Site.Params.valine.appId }}',
-        appKey: '{{ .Site.Params.valine.appKey }}',
-        placeholder: '{{ .Site.Params.valine.placeholder }}',
-        visitor: '{{ .Site.Params.valine.visitor }}',
-    })
-</script>
+    <link rel="stylesheet" href="{{ "/css/comments.css" | absURL }}" />
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+    <script type="text/javascript">
+        new Valine({
+            el: '#vcomments',
+            appId: '{{ .Site.Params.valine.appId }}',
+            appKey: '{{ .Site.Params.valine.appKey }}',
+            placeholder: '{{ .Site.Params.valine.placeholder }}',
+            visitor: '{{ .Site.Params.valine.visitor }}',
+        })
+    </script>
+{{ else  }}
+    <div class="doc_comments">{{ template "_internal/disqus.html" . }}</div>
+{{ end }}

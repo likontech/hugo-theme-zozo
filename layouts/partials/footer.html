@@ -1,8 +1,17 @@
 <footer class="footer">
     <div class="powered_by">
-        <a href="https://varkai.com">Designed by VarKai,</a>
-        <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+        <span>Powered by ❤️ </span>
+        {{ if .Site.Params.busuanzi.enable -}}
+            <span id="busuanzi_container_site_uv">
+                <span id="busuanzi_value_site_uv"></span>
+            </span>
+            <span>/</span>
+            <span id="busuanzi_container_site_pv">
+                <span id="busuanzi_value_site_pv"></span>
+            </span>
+        {{- end -}}
     </div>
+    <!-- busuanzi -->
 
     <div class="footer_slogan">
         <span>{{ .Site.Params.footerSlogan }}</span>
