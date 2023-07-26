@@ -1,4 +1,4 @@
-baseURL = "https://www.gekang.tech/"
+baseURL = 'https://likontech.github.io/'
 languageCode = "zh"
 defaultContentLanguage = "zh"
 title = "likon"                        # site title                     # 网站标题
@@ -62,10 +62,7 @@ pygmentscodefencesguesssyntax = true
 # 社交地址配置
 [social]
   github = "https://github.com/likontech"
-  twitter = "https://twitter.com/G_Likon"
-  facebook = ""
-  weibo = " "
-  instagram = " "
+  twitter = "https://twitter.com/likontech"
 
 [markup]
 [markup.goldmark]

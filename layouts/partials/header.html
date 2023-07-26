@@ -3,20 +3,19 @@
         <div class="site_title">
             <h1>
                 <a href="{{ .Site.BaseURL }}">
-                    <!-- <span>{{ .Site.Title }}</span> -->
                     <img class="likon" style="margin-top: -20px; margin-left: -10px;" src="{{ "images/icon_likon.png" | absURL }}" width="150px">
+                    <!-- <span>{{ .Site.Title }}</span> -->
                 </a>
             </h1>
         </div>
         <div class="description">
             <p class="sub_title">{{ with .Site.Params.subTitle }}{{ . }}{{ else }}{{ end }}</p>
             <div class="my_socials">
-                {{ range $key, $val := .Site.Social }}
-                {{ if ne $val "" }}
                 <!-- https://remixicon.com/ -->
-                <a href="{{ $val }}" title="{{ $key }}" target="_blank"><i class="ri-{{ $key }}-fill"></i></a>
-                {{ end }}
-                {{ end }}
+                <a href="https://github.com/likontech" title="github" target="_blank"><i class="ri-github-fill"></i></a>
+                
+                <a href="https://twitter.com/likontech" title="twitter" target="_blank"><i class="ri-twitter-fill"></i></a>
+                
                 <a href="{{ .Site.RSSLink }}" type="application/rss+xml" title="rss" target="_blank"><i
                         class="ri-rss-fill"></i></a>
             </div>
