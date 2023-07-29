@@ -58,12 +58,6 @@ pygmentscodefencesguesssyntax = true
 [params.utterances]
   enable = true
 
-# Your socail's url
-# 社交地址配置
-[social]
-  github = "https://github.com/likontech"
-  twitter = "https://twitter.com/likontech"
-
 [markup]
 [markup.goldmark]
 [markup.goldmark.renderer]
