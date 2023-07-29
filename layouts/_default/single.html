@@ -9,10 +9,14 @@
                 <div class="post animate__animated animate__fadeInDown">
                     <div class="post_title post_detail_title">
                         <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
-                        <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+                        <span class="date"><i class="ri-calendar-fill"> </i>{{ .Date.Format "2006.01.02" }}</span>
+                        <span>&nbsp;</span>
                         <!-- busuanzi -->
                         {{ if .Site.Params.busuanzi.enable -}}
-                            <span class="date" id="busuanzi_container_page_pv">·&nbsp;<span class="date" id="busuanzi_value_page_pv"></span></span>
+                            <!-- https://remixicon.com/ -->
+                            <span class="date" id="busuanzi_container_page_pv">
+                                <i class="ri-eye-fill"> </i><span class="date" id="busuanzi_value_page_pv"></span>
+                            </span>
                         {{- end }}
                     </div>
                     <div class="post_content markdown">{{ .Content }}</div>

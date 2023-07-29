@@ -43,12 +43,12 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   subTitle = "岁岁年，碎碎念"                                       # site's subTitle              # 网站二级标题
-  footerSlogan = "学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？"                                   # site's footer slogan         # 网站页脚标语
   keywords = ["likon","碎碎念","记录"]                                   # site's keywords              # 网站关键字
   description = "likon 的个人技术博客网站，主要专注大前端，记录技术、所思所想"                        # site's description           # 网站描述
   enableMathJax = true                                                 # enable mathjax               # 是否使用mathjax（数学公式）
   enableSummary = false                                                 # display the article summary  # 是否显示文章摘要
   mainSections = ["posts","post"]
+  # footerSlogan = "学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？"                                   # site's footer slogan         # 网站页脚标语
 
 # 不蒜子
 [params.busuanzi]

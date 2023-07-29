@@ -1,13 +1,13 @@
 <footer class="footer">
     <div class="powered_by">
-        <span>Powered by ❤️ </span>
         {{ if .Site.Params.busuanzi.enable -}}
-            <span id="busuanzi_container_site_uv">
+            <!-- <span id="busuanzi_container_site_uv">
                 <span id="busuanzi_value_site_uv"></span>
             </span>
-            <span>/</span>
+            <span>/</span> -->
+            <!-- https://remixicon.com/ -->
             <span id="busuanzi_container_site_pv">
-                <span id="busuanzi_value_site_pv"></span>
+                <i class="ri-eye-fill"></i> <span id="busuanzi_value_site_pv"></span>
             </span>
         {{- end -}}
     </div>
@@ -15,5 +15,6 @@
 
     <div class="footer_slogan">
         <span>{{ .Site.Params.footerSlogan }}</span>
+        <img src="{{ "images/funny.png" | absURL }}" height="30px" alt="首先要有意思">
     </div>
 </footer>
