@@ -1,0 +1,23 @@
+{{ if and (gt .WordCount 400 ) (.Params.toc) }}
+<aside>
+    {{ .TableOfContents }}
+</aside>
+{{ end }}
+
+<!-- https://yyqx.online/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/ -->
+<!-- {{ if (.Params.toc | default true ) }}
+<div class="post-toc" id="post-toc">
+<aside>
+    <header>
+    <h3>{{.Title}}</h3>
+    </header>
+    {{ $emtLiPtrn := "(?s)<ul>\\s<li>\\s<ul>(.*)</li>\\s</ul>" }}
+    {{ $rplcEmtLi := "<ul>$1" }}
+    {{ .TableOfContents | replaceRE $emtLiPtrn $rplcEmtLi | safeHTML }}
+    https://github.com/gohugoio/hugo/issues/1778#issuecomment-483880269
+    {{.TableOfContents}}
+</aside>
+<a href="#" id="toc-toggle"></a>
+</div>
+
+{{ end }} -->

@@ -19,6 +19,7 @@
                             </span>
                         {{- end }}
                     </div>
+                    {{- partial "toc.html" . }}
                     <div class="post_content markdown">{{ .Content }}</div>
                     <div class="post_footer">
                         {{ with .Params.tags }}
