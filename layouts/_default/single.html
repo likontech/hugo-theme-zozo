@@ -18,6 +18,8 @@
                                 <i class="ri-eye-fill"> </i><span class="date" id="busuanzi_value_page_pv"></span>
                             </span>
                         {{- end }}
+                        <span>&nbsp;</span>
+                        <span class="date"><i class="ri-quill-pen-fill"> </i>{{ .WordCount }}</span>
                     </div>
                     {{- partial "toc.html" . }}
                     <div class="post_content markdown">{{ .Content }}</div>
